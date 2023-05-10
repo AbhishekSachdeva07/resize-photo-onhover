@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img1,#img2,#img22,#img12{
+            width: 200px;
+        }
+        .container{
+            width: 500px;
+            height: 500px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="phone.png" alt="" id="img1">
+        <img src="mail.png" alt="" id="img2">
+    </div>
+    <div class="toselet">
+        <img src="phone.png" alt="" id="img12"
+        onmouseover="document.getElementById('img1').style.width='500px';">
+        <img src="mail.png" alt="" id="img22">
+    </div>
+</body>
+<script>
+    let a=document.getElementById("img12");
+    let d=document.getElementById("img22");
+    let b= document.getElementById("img1");
+    let c= document.getElementById("img2");
+    a.addEventListener("mouseover",big);
+    a.addEventListener("mouseleave",small);
+    d.addEventListener("mouseover",big1);
+    d.addEventListener("mouseleave",small1);
+    function big()
+    {
+        b.style.width='500px';
+        c.style.display='none';
+    }
+    function small()
+    {
+        b.style.width='200px';
+        c.style.display='inline-block';
+    }
+    function big1()
+    {
+        c.style.width='500px';
+        b.style.display='none';
+    }
+    function small1()
+    {
+        c.style.width='200px';
+        b.style.display='inline-block';
+    }
+</script>
+</html>
