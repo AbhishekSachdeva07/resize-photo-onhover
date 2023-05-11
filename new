@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            width: 500px;
+            height: 500px;
+            border: 1px solid;
+        }
+        #img-main{
+            width: 500px;
+        }
+        #img1-main,#img2-main,#img3-main{
+            display: none;
+            width: 500px;
+        }
+        .select-container
+        {
+            width: 500px;
+            height: 200px;
+            border: 1px solid;
+            margin-top: 15px;
+            display: flex;
+        }
+        #img1,#img2,#img3
+        {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ADD MAIN PHOTO TO DISPLAY -->
+        <img src="" alt="" id="img-main">
+        <!-- ADD 3 PHOTOS THAT U DISPLAY DOWN -->
+        <img src="" alt="" id="img1-main">
+        <img src="" alt="" id="img2-main">
+        <img src="" alt="" id="img3-main">
+    </div>
+    <div class="select-container">
+        <!-- ADD 3 PHOTOS -->
+        <img src="" alt="" id="img1">
+        <img src="" alt="" id="img2">
+        <img src="" alt="" id="img3">
+    </div>
+</body>
+<script>
+    let a = document.getElementById("img1");
+    let b = document.getElementById("img2");
+    let c = document.getElementById("img3");
+    let d = document.getElementById("img-main");
+    let e = document.getElementById("img1-main");
+    let f = document.getElementById("img2-main");
+    let g = document.getElementById("img3-main");
+
+    a.addEventListener("mouseover",show);
+    a.addEventListener("mouseleave",hide);
+    b.addEventListener("mouseover",show1);
+    b.addEventListener("mouseleave",hide1);
+    c.addEventListener("mouseover",show2);
+    c.addEventListener("mouseleave",hide2);
+    function show()
+    {
+        d.style.display='none';
+        e.style.display='block';
+    }
+    function show1()
+    {
+        d.style.display='none';
+        f.style.display='block';
+    }
+    function show2()
+    {
+        d.style.display='none';
+        g.style.display='block';
+    }
+    function hide()
+    {
+        d.style.display='block';
+        e.style.display='none';
+    }
+    function hide1()
+    {
+        d.style.display='block';
+        f.style.display='none';
+    }
+    function hide2()
+    {
+        d.style.display='block';
+        g.style.display='none';
+    }
+</script>
+</html>
